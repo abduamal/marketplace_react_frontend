@@ -1,7 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// set up the store (redux-store)
+// run create react store
+// middleware incorporates thunk with the store
+import { createStore, applyMiddleware } from 'redux'
+// for asynchronous requests
+import thunk from 'redux-thunk'
+// wraps the app so that I can use redux
+// gives access to redux store
+import { Provider } from 'react-redux'
 import App from './App';
+
+
+
 
 ReactDOM.render(
   <React.StrictMode>
