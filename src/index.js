@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// set up the store (redux-store)
-// run create react store
+// store functions:
+// createStore creates the redux store
+    //Store is where data is stored
 // middleware incorporates thunk with the store
-import { createStore, applyMiddleware } from 'redux'
+// compose combines different middlewares into one so that only one 'second' argument is passed when assigning store variable
+import { createStore, applyMiddleware, compose } from 'redux'
 // for asynchronous requests
 import thunk from 'redux-thunk'
 // wraps the app so that I can use redux
@@ -12,13 +14,19 @@ import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 import App from './App';
 
-
-
-
+//
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// set up the store (redux-store)
+    //reducer defines what can be done with store through specific actions
+     // - actions are dispatched to the reducer(sending action (object) to the reducer
+     // - then the reducer decides what action to take ((asks itself, 'how should I update current store?')), based on condition definitions its given
+     // - it returns a new version of the store
+let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
+// wrap App in provider so that the store is global to all components
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
