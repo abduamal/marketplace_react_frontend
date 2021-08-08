@@ -3,7 +3,12 @@
 // shop reducer is a fuction in essence
 
 export default function shopReducer(state = {shops: []}, action ) {
+  switch (action.type) {
+    case 'FETCH_SHOPS':
+      return {shops: action.payload}
+    default:
 
-  return action.payload
+  }
+  return state
 
 }
