@@ -1,7 +1,8 @@
 import React from 'react'
 import './App.css';
-import { connect } from 'react-redux'
-import { fetchShops } from './actions/fetchShops'
+// import { connect } from 'react-redux'
+import ShopsContainer from './containers/ShopsContainer'
+// import { fetchShops } from './actions/fetchShops'
 
 class App extends React.Component {
   // constructor() {
@@ -9,13 +10,13 @@ class App extends React.Component {
   //   // this.mapStateToProps = this.mapStateToProps.bind(this)
   // }
 
-  componentDidMount() {
-    this.props.fetchShops({type: 'FETCH_SHOPS', payload: {industry: 'Retail'}})
-  }
+  // componentDidMount() {
+  //   this.props.fetchShops({type: 'FETCH_SHOPS', payload: {industry: 'Retail'}})
+  // }
   render() {
     return(
       <div className="App">
-        App
+        <ShopsContainer/>
       </div>
     )
   }
@@ -26,9 +27,10 @@ class App extends React.Component {
   // }
 }
 
-//
+// connect:
 // it takes two arguments: mapStateToProps, (action => {fetchShops}) or {mapDispatchToProps}
 // the first argument gives access to the values from the store as props
 // the second argument allows changes to be dispatched back
 // connect automatically calls dispatch on the return value of fetchShops
-export default connect(null, {fetchShops})(App);
+// with connect, children and associated components of App can be 'connected' because of the Provider. This means all the children, grandchildren, etc, of App can update the store
+export default App;
