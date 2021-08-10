@@ -17,7 +17,7 @@ class ShopsContainer extends React.Component {
   render(){
     return(
       <div>
-        <ShopInput/>
+        <ShopInput/><br/><br/>
         <Shops shops={this.props.shops}/>
       </div>
     )

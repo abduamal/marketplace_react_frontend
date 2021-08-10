@@ -6,6 +6,8 @@ export default function shopReducer(state = {shops: []}, action ) {
   switch (action.type) {
     case 'FETCH_SHOPS':
       return {shops: action.payload}
+    case 'ADD_SHOP':
+      return {...state, shops: [...state.shops, action.payload]}
     default:
 
   }
