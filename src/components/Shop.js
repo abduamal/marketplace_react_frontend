@@ -1,5 +1,6 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
+import ProductsContainer from '../containers/ProductsContainer'
+// import { Redirect } from 'react-router-dom'
 
 function Shop(props) {
 
@@ -8,10 +9,14 @@ function Shop(props) {
   let shop = props.shops[props.match.params.id - 1]
   console.log(shop);
   return (
-    <li>
-      {/* {shop ? null : <Redirect to='/shops'/>} */}
-      {shop ? shop.name : null} - {shop? shop.industry : null}
-    </li>
+    <div>
+      <h2>
+        {/* {shop ? null : <Redirect to='/shops'/>} */}
+        {shop ? shop.name : null} - {shop? shop.industry : null}
+      </h2>
+      <ProductsContainer shop={shop}/>
+    </div>
+
   )
 }
 
