@@ -23,6 +23,10 @@ class ShopInput extends React.Component {
   handleSubmit(event) {
     event.preventDefault()
     this.props.addShop(this.state)
+    this.setState({
+      name: '',
+      industry: ''
+    })
   }
 
   render() {
@@ -35,7 +39,7 @@ class ShopInput extends React.Component {
           <select onChange={this.handleChange} name='industry' value={this.state.industry}  >
             <option value="Entertainment">Entertainment</option>
             <option value="Technology">Technology</option>
-            <option selected value="Retail">Retail</option>
+            <option defaultValue="Retail">Retail</option>
             <option value="Service">Service</option>
             <option value="Other">Other</option>
           </select><br/>

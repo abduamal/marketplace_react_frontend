@@ -1,4 +1,5 @@
 import React from 'react'
+import Shop from './Shop'
 
 
 // to render the list of shops, this Shops function has access to the list of shops via ShopsContainer
@@ -8,7 +9,7 @@ function Shops(props) {
   return(
     <div>
       {props.shops.map(shop =>
-        <li key={shop.id}>{shop.name} - {shop.industry}</li>
+        <div key={shop.id}><Shop shop={shop}/></div>
       )}
     </div>
   )

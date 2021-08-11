@@ -1,8 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Route } from 'react-router-dom'
 import { fetchShops } from '../actions/fetchShops'
 import ShopInput from '../components/ShopInput'
 import Shops from '../components/Shops'
+import Shop from '../components/Shop'
 
 class ShopsContainer extends React.Component {
   // constructor() {
@@ -17,8 +19,9 @@ class ShopsContainer extends React.Component {
   render(){
     return(
       <div>
-        <ShopInput/><br/><br/>
-        <Shops shops={this.props.shops}/>
+        <Route path='/shops/new' component={ShopInput}/>
+        <Route path='/shops/:id'render={(routerProps) => <Shop {...routerProps} shops={this.props.shops}/>}/>
+        <Route exact path='/shops' render={(routerProps) => <Shops {...routerProps} shops={this.props.shops}/>}/>
       </div>
     )
   }

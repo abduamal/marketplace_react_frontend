@@ -11,7 +11,9 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 // wraps the app so that I can use redux
 // gives access to redux store
-import { Provider } from 'react-redux';
+import { Provider } from 'react-redux'
+// gives components access to routes and enables them to use links
+import {BrowserRouter as Router} from 'react-router-dom'
 import shopReducer from './reducers/shopReducer';
 import App from './App';
 
@@ -29,7 +31,9 @@ const store = createStore(shopReducer, composeEnhancers(applyMiddleware(thunk)))
 // wrap App in provider so that the store is global to all components
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
