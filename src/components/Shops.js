@@ -1,4 +1,5 @@
 import React from 'react'
+import {Route, Link} from 'react-router-dom'
 import Shop from './Shop'
 
 
@@ -9,7 +10,9 @@ function Shops(props) {
   return(
     <div>
       {props.shops.map(shop =>
-        <div key={shop.id}><Shop shop={shop}/></div>
+        <div key={shop.id}>
+          <Link to={`/shops/${shop.id}`}>{shop.name}</Link>
+        </div>
       )}
     </div>
   )
