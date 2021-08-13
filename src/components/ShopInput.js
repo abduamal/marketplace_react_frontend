@@ -7,7 +7,7 @@ class ShopInput extends React.Component {
     super(props)
     this.state = {
       name: '',
-      industry: ''
+      industry: 'Entertainment'
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -39,7 +39,7 @@ class ShopInput extends React.Component {
           <select onChange={this.handleChange} name='industry' value={this.state.industry}  >
             <option value="Entertainment">Entertainment</option>
             <option value="Technology">Technology</option>
-            <option defaultValue="Retail">Retail</option>
+            <option value="Retail">Retail</option>
             <option value="Service">Service</option>
             <option value="Other">Other</option>
           </select><br/>
