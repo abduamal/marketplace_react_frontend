@@ -11,7 +11,7 @@ class ProductContainer extends React.Component {
 
     return(
       <div>
-        <ProductInput/>
+        <ProductInput shop={this.props.shop}/>
         <Products products={this.props.shop && this.props.shop.products}/>
       </div>
     )
