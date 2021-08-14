@@ -1,8 +1,8 @@
 import React from 'react'
 import './App.css';
-// import { connect } from 'react-redux'
 import ShopsContainer from './containers/ShopsContainer'
-// import { fetchShops } from './actions/fetchShops'
+import NavigationContainer from './containers/NavigationContainer'
+
 
 class App extends React.Component {
   // constructor() {
@@ -17,6 +17,7 @@ class App extends React.Component {
     return(
       <div className="App">
         <ShopsContainer/>
+        <NavigationContainer/>
       </div>
     )
   }
