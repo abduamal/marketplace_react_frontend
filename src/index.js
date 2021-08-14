@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import './index.css';
 // store functions:
 // createStore creates the redux store
     //Store is where data is stored
@@ -15,6 +15,7 @@ import { Provider } from 'react-redux'
 // gives components access to routes and enables them to use links
 import {BrowserRouter as Router} from 'react-router-dom'
 import shopReducer from './reducers/shopReducer';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import App from './App';
 
 //
