@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css';
 import ShopsContainer from './containers/ShopsContainer'
 import NavigationContainer from './containers/NavigationContainer'
+import NavigationBar from './components/NavigationBar.js'
 
 
 class App extends React.Component {
@@ -15,10 +16,11 @@ class App extends React.Component {
   // }
   render() {
     return(
-      <div className="App">
+      <React.Fragment>
+        <NavigationBar/>
         <ShopsContainer/>
         <NavigationContainer/>
-      </div>
+      </React.Fragment>
     )
   }
 
