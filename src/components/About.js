@@ -1,9 +1,35 @@
 import React from 'react'
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
+import Accordion from 'react-bootstrap/Accordion'
 
 export default function About() {
   return(
-    <div>
-      About
-    </div>
+    <React.Fragment>
+      <Card className="text-center">
+        <Card.Header>Current Features</Card.Header>
+        <Card.Body>
+          <Card.Title>Inventory</Card.Title>
+          <Card.Text>
+            Currently, the Marketplace is an inventory. One can add a shop, add products to that shop, and view all the shops and all the products that belong to that shop.
+          </Card.Text>
+          <Button href='/shops' variant="primary">View Shops</Button>
+        </Card.Body>
+      </Card>
+      <Accordion flush>
+        <Accordion.Item eventKey="0">
+          <Accordion.Header>Upcoming Features</Accordion.Header>
+          <Accordion.Body>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+            est laborum.
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
+    </React.Fragment>
   )
 };
