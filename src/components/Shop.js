@@ -1,6 +1,6 @@
 import React from 'react'
 import ProductsContainer from '../containers/ProductsContainer'
-// import { Redirect } from 'react-router-dom'
+import '../index.css'
 
 function Shop(props) {
 
@@ -11,10 +11,10 @@ function Shop(props) {
   console.log(shop);
   return (
     <div>
-      <h2>
-        {/* {shop ? null : <Redirect to='/shops'/>} */}
+      <br/>
+      <h4 className='pageTitle'>
         {shop ? shop.name : null} - {shop? shop.industry : null}
-      </h2>
+      </h4><br/>
       <ProductsContainer shop={shop}/>
     </div>
 

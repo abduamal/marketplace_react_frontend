@@ -1,6 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addShop } from '../actions/addShop'
+import Form from 'react-bootstrap/Form'
+import FloatingLabel from 'react-bootstrap/FloatingLabel'
+import Button from 'react-bootstrap/Button'
+
 
 class ShopInput extends React.Component {
   constructor(props) {
@@ -32,19 +36,27 @@ class ShopInput extends React.Component {
   render() {
     return(
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>Shop Name</label>
-          <input type='text' placeholder='Name' value={this.state.name} name='name' onChange={this.handleChange}/><br/>
-          <label>Shop Industry</label>
-          <select onChange={this.handleChange} name='industry' value={this.state.industry}  >
-            <option value="Entertainment">Entertainment</option>
-            <option value="Technology">Technology</option>
-            <option value="Retail">Retail</option>
-            <option value="Service">Service</option>
-            <option value="Other">Other</option>
-          </select><br/>
-          <input type='Submit'/>
-        </form>
+        <Form onSubmit={this.handleSubmit}>
+          <FloatingLabel
+            controlId="floatingInput"
+            label="Shop Name"
+            className="mb-3"
+          >
+            <Form.Control type='text' placeholder='Name' value={this.state.name} name='name' onChange={this.handleChange}/>
+          </FloatingLabel>
+          <FloatingLabel controlId="floatingSelect" label="Select An Industry">
+            <Form.Select aria-label="Select an Industry" onChange={this.handleChange} name='industry' value={this.state.industry} >
+              <option value="Entertainment">Entertainment</option>
+              <option value="Technology">Technology</option>
+              <option value="Retail">Retail</option>
+              <option value="Service">Service</option>
+              <option value="Other">Other</option>
+            </Form.Select>
+          </FloatingLabel>
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
       </div>
     )
   }
