@@ -23,7 +23,6 @@ class App extends React.Component {
       </React.Fragment>
     )
   }
-
   //gives access to values in from the store as props
   // const mapStateToProps = (state) => {
   //

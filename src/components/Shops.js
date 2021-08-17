@@ -1,6 +1,6 @@
 import React from 'react'
-import {Route, Link} from 'react-router-dom'
-import Shop from './Shop'
+// import {Route, Link} from 'react-router-dom'
+// import Shop from './Shop'
 import Button from 'react-bootstrap/Button'
 
 

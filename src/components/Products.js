@@ -1,8 +1,5 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
-import ListGroup from 'react-bootstrap/ListGroup'
-import ListGroupItem from 'react-bootstrap/ListGroup'
 import CardGroup from 'react-bootstrap/CardGroup'
 
 function Products(props) {
@@ -23,12 +20,8 @@ function Products(props) {
                 {product.quantity} items available
               </Card.Text>
             </Card.Body>
-            <Card.Body>
-              <Card.Link href="/shops">Go Back</Card.Link>
-            </Card.Body>
           </Card>
         </CardGroup>
-
       )}
     </div>
   )
