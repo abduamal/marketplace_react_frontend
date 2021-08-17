@@ -1,4 +1,24 @@
-# Getting Started with Create React App
+# MARKETPLACE - An Inventory Single Page Application
+
+## Current Features
+Currently, the Marketplace is an inventory. One can add a shop/product, add products to that shop, and view all the shops and all the products that belong to that shop.
+
+## Upcoming Features
+Soon, I hope to implement the following features into this application:
+
+Delete/Edit a Product.\
+Delete/Edit a Shop.\
+Authentication.\
+Buying and Selling.\
+
+## Rails API
+
+This project was built with a Rails Backend. View the source code [here](https://github.com/abduamal/marketplace_backend).
+
+In the project directory, you can run:
+### `rails s`
+
+# Now, A Few Notes On Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -6,10 +26,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `export PORT=5000`
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
