@@ -9,7 +9,7 @@ Soon, I hope to implement the following features into this application:
 Delete/Edit a Product.\
 Delete/Edit a Shop.\
 Authentication.\
-Buying and Selling.\
+Buying and Selling.
 
 ## Rails API
 
