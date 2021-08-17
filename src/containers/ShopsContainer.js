@@ -9,10 +9,6 @@ import Shops from '../components/Shops'
 import Shop from '../components/Shop'
 
 class ShopsContainer extends React.Component {
-  // constructor() {
-  //   super()
-  // }
-
 
   componentDidMount() {
     // to connect fetchShops to redux store, use props

@@ -9,7 +9,6 @@ function Shop(props) {
   // then, it is using the id to find the specific shop
 
   const shop = props.shops[props.match.params.id - 1]
-  console.log(props)
 
   return (
     <div>

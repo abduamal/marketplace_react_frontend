@@ -5,9 +5,6 @@ import About from '../components/About.js'
 
 
 class NavigationContainer extends React.Component {
-  // constructor() {
-  //
-  // }
 
   render() {
     return(
