@@ -1,23 +1,29 @@
 import React from 'react'
 import ProductInput from '../components/ProductInput'
 import Products from '../components/Products'
-import { addProduct } from '../actions/addProduct.js'
-import { Route, Switch } from 'react-router-dom'
+import Accordion from 'react-bootstrap/Accordion'
 
 class ProductContainer extends React.Component {
-  // constructor() {
-  //
-  // }
 
   render() {
 
     return(
-      <div>
-        <Switch>
-          <Route exact path='/shops/:id/new' component={ProductInput}/>
-          <Products products={this.props.shop && this.props.shop.products}/>
-        </Switch>
-      </div>
+      <React.Fragment>
+        <Accordion defaultActiveKey="0">
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>Products</Accordion.Header>
+            <Accordion.Body >
+              <Products products={this.props.shop && this.props.shop.products}/>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>Add A New Product</Accordion.Header>
+            <Accordion.Body>
+              <ProductInput shop={this.props.shop}/>
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+      </React.Fragment>
     )
   }
 }
