@@ -1,6 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addProduct } from '../actions/addProduct'
+import Form from 'react-bootstrap/Form'
+import FloatingLabel from 'react-bootstrap/FloatingLabel'
+import Button from 'react-bootstrap/Button'
 
 class ProductInput extends React.Component{
   constructor(props) {
@@ -35,17 +38,40 @@ class ProductInput extends React.Component{
   render() {
     return(
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>Product Name:</label>
-          <input type='text' placeholder='Name' name='name' onChange={this.handleChange} value={this.state.name}/><br/><br/>
-          <label>Product Description:</label>
-          <textarea placeholder='Description' name='description' onChange={this.handleChange} value={this.state.description}/><br/><br/>
-          <label>Product Price:</label>
-          <input type='text' placeholder='Price' name='price' onChange={this.handleChange} value={this.state.price}/><br/><br/>
-          <label>Product Quantity:</label>
-          <input type='text' placeholder='Quantity' name='quantity' onChange={this.handleChange} value={this.state.quantity}/><br/><br/><br/>
-          <input type='submit'/><br/><br/>
-        </form>
+        <Form onSubmit={this.handleSubmit}>
+          <FloatingLabel
+            controlId="floatingInput"
+            label="Product Name"
+            className="mb-3"
+          >
+            <Form.Control type='text' placeholder='Name' value={this.state.name} name='name' onChange={this.handleChange}/>
+          </FloatingLabel>
+          <FloatingLabel
+            controlId="floatingInput"
+            label="Product Description"
+            className="mb-3"
+          >
+            <Form.Control type='text' placeholder='Description' value={this.state.description} name='description' onChange={this.handleChange}/>
+          </FloatingLabel>
+          <FloatingLabel
+            controlId="floatingInput"
+            label="Product Price"
+            className="mb-3"
+          >
+            <Form.Control type='text' placeholder='Price' value={this.state.price} name='price' onChange={this.handleChange}/>
+          </FloatingLabel>
+          <FloatingLabel
+            controlId="floatingInput"
+            label="Product Quantity"
+            className="mb-3"
+          >
+            <Form.Control type='text' placeholder='Quantity' value={this.state.quantity} name='quantity' onChange={this.handleChange}/>
+          </FloatingLabel>
+
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
       </div>
     )
   }
