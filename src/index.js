@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import './index.css';
 // store functions:
 // createStore creates the redux store
     //Store is where data is stored
@@ -18,7 +17,6 @@ import shopReducer from './reducers/shopReducer';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import App from './App';
 
-//
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 // set up the store (redux-store)
